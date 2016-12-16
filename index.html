@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>demo</title>
+<meta name="viewport" content="">
+</head>
+
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="libs/layer/skin/layer.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script>
+var scaleRate = document.documentElement.clientWidth / 320 ;
+document.querySelector('meta[name="viewport"]').setAttribute("content", "width=320, initial-scale=" + scaleRate + ", maximum-scale=" + scaleRate + ", user-scalable=no");
+</script>
+<body>
+    <div class="container-fluid">
+
+        <div class="header">
+            <div class="logo"><img src="img/logo.png"></div>
+        </div>
+
+        <nav class = "nav">
+            <div class="nav-item"><a href="#1">表格</a></div>
+            <div class="nav-item"><a href="#2">表单</a></div>
+<!--            <div class="nav-item"><a href="#3">3</a></div>
+            <div class="nav-item"><a href="#4">4</a></div>
+            <div class="nav-item"><a href="#5">5</a></div> -->
+        </nav>
+
+        <div class="main-cont">
+            <div class="page-title">页面标题</div>
+
+            <ol class="breadcrumb">
+              <li><a href="#1">首页</a></li>
+              <li><a href="#2">子菜单</a></li>
+              <li class="active">子选项</li>
+            </ol>
+
+            <div class="page-view" ng-view></div>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript" src="libs/require.min.js" data-main="js/common/requireConfig.js"></script>
+</html>

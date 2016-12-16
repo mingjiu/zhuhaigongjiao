@@ -1,0 +1,18 @@
+{
+  "name": "csms",
+  "version": "0.0.2",
+  "description": "csms",
+  "main": "index.js",
+  "scripts": {
+    "test": "null"
+  },
+  "repository": {
+    "type": "git",
+    "url": "null"
+  },
+  "keywords": [
+    "csms"
+  ],
+  "author": "mjhuang",
+  "license": "ISC"
+}

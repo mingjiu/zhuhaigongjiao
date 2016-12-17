@@ -1,67 +1,16 @@
-body{
-	font-family: '微软雅黑';
-	color: #333;
-}
-
-.header{
-	height: 46px;
+.wrapper{
 	position: absolute;
 	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	font-size: 14px;
+}
+.main{
+	position: absolute;
 	left: 0;
 	right: 0;
-	background-color: #364150;
-	z-index: 9000;
-}
-.header .logo{
-	height: 46px;
-	line-height: 46px;
-	text-align: center;
-	width: 230px;
-}
-
-.nav{
-	padding-top: 46px;
-	width: 230px;
-	position: absolute;
 	top: 0;
-	left: 0;
-	bottom: 0;
-	background-color: #364150;
-	z-index: 8999;
-}
-
-.nav .nav-item{
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-}
-.nav .nav-item a{
-	text-decoration: none;
-	color: #b4bcc8;
-	display: block;
-}
-.nav .nav-item a:active, .nav .nav-item a:hover{
-	background: #2C3542;
-}
-.main-cont{
-	position: absolute;
-	top: 46px;
-	left: 230px;
-	right: 0;
-	bottom: 0;
-	background: #fff;
-	z-index: 10000;
-	padding: 25px 20px 10px 20px;
-	overflow-y: scroll;
-	overflow-x: hidden;
-}
-.main-cont .page-title{
-	background-color: #fff;
-	font-size: 28px;
-	height: 30px;
-	line-height: 30px;
-	margin-bottom: 10px;
-}
-.main-cont .page-view{
-	position: relative;
+	bottom: 53px;
 }

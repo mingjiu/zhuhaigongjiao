@@ -2,18 +2,19 @@
 <html lang="zh-CN">
 <head>
 <title>demo</title>
-<meta name="viewport" content="">
+<meta name="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="/css/weui.min.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="/css/main.css" media="screen" title="no title" charset="utf-8">
 </head>
 
-<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="libs/layer/skin/layer.css" rel="stylesheet" type="text/css">
-<link href="css/main.css" rel="stylesheet" type="text/css">
 <script>
-var scaleRate = document.documentElement.clientWidth / 320 ;
-document.querySelector('meta[name="viewport"]').setAttribute("content", "width=320, initial-scale=" + scaleRate + ", maximum-scale=" + scaleRate + ", user-scalable=no");
+var scaleRate = document.documentElement.clientWidth / 375 ;
+document.querySelector('meta[name="viewport"]').setAttribute("content", "width=375, initial-scale=" + scaleRate + ", maximum-scale=" + scaleRate + ", user-scalable=no");
+// var g = document.documentElement.clientWidth / 320;
+//     document.getElementById('eqMobileViewport').setAttribute("content", "width=320, initial-scale=" + g + ", maximum-scale=" + g + ", user-scalable=no")
 </script>
-<body>
-    <div class="container-fluid">
+<body ontouchstart>
+    <!-- <div class="container-fluid">
 
         <div class="header">
             <div class="logo"><img src="img/logo.png"></div>
@@ -22,9 +23,6 @@ document.querySelector('meta[name="viewport"]').setAttribute("content", "width=3
         <nav class = "nav">
             <div class="nav-item"><a href="#1">表格</a></div>
             <div class="nav-item"><a href="#2">表单</a></div>
-<!--            <div class="nav-item"><a href="#3">3</a></div>
-            <div class="nav-item"><a href="#4">4</a></div>
-            <div class="nav-item"><a href="#5">5</a></div> -->
         </nav>
 
         <div class="main-cont">
@@ -39,6 +37,34 @@ document.querySelector('meta[name="viewport"]').setAttribute("content", "width=3
             <div class="page-view" ng-view></div>
         </div>
 
+    </div> -->
+    <div class="wrapper">
+        <div class="main">
+            <div class="page-view" ng-view></div>
+        </div>
+
+        <div class="weui-tab">
+            <div class="weui-tab__panel">
+            </div>
+            <div class="weui-tabbar">
+                <a href="#realtime" class="weui-tabbar__item weui-bar__item_on">
+                    <span style="display: inline-block;position: relative;">
+                        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    </span>
+                    <p class="weui-tabbar__label">实时查询</p>
+                </a>
+                <a href="translate" class="weui-tabbar__item">
+                    <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">换乘</p>
+                </a>
+                <a href="station" class="weui-tabbar__item">
+                    <span style="display: inline-block;position: relative;">
+                        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    </span>
+                    <p class="weui-tabbar__label">站点查询</p>
+                </a>
+            </div>
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="libs/require.min.js" data-main="js/common/requireConfig.js"></script>

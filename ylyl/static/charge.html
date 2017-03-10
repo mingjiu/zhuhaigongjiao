@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+        <meta charset="utf-8">
+        <title>充值</title>
+        <style>
+            body{
+                padding: 0;margin: 0;
+            }
+            .header{
+                height: 50px;
+                background: #1D90FD;
+                margin-bottom: 10px;
+            }
+            .fl{
+                float: left;
+            }
+            .info-item{
+                display: inline-block;
+                width: 100%;
+                font-size: 16px;
+                margin: 10px 0;
+            }
+            .info-item .label{
+                width: 30%;
+                text-align: right;
+            }
+            .tips{
+                color: red;
+                font-size: 14px;
+            }
+            p{
+                margin: 10px 0;
+                padding: 0 15px;
+            }
+            select{
+                font-size: 16px;
+            }
+            .charge-cont{
+                display: inline-block;
+                width: 100%;
+                border-top: 1px solid #C6C5CA;
+                border-bottom: 1px solid #C6C5CA;
+                position: relative;
+                margin-top: 16px;
+            }
+            .charge-item{
+                float: left;
+                width: 33.33333%;
+                position: relative;
+            }
+            .charge{
+                margin: 14px;
+                text-align: center;
+                border: 1px solid #C6C6C6;
+                border-radius: 6px;
+            }
+            .charge.active{
+                color: red;
+                border-color: red;
+            }
+            .price{
+                display: inline-block;
+                width: 30px;
+                text-align: center;
+            }
+            button{
+                border: 0;
+                outline: 0;
+                display: block;
+                margin: 20px auto;
+                background: #19B494;
+                border-radius: 6px;
+                width: 160px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 18px;
+                color: white;
+            }
+            button:active{
+                background: #3beac6;
+            }
+        </style>
+    </head>
+    <body touchstart="">
+        <div class="header"></div>
+        <div class="info-cont">
+            <div class="info-item">
+                <div class="label fl">昵称：</div><div class="fl">mjhuang</div>
+            </div>
+            <div class="info-item">
+                <div class="label fl">选择游戏：</div>
+                <div class="fl">
+                    <select class="" name="">
+                        <option value="1">跑得快</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="tips">
+            <p>小提示：</p>
+            <p>1、成功购买后房卡直接充值到游戏中</p>
+            <p>2、房卡将充入您当前微信绑定的游戏账号，请确认无误</p>
+        </div>
+
+        <div class="charge-cont">
+            <div class="charge-item">
+                <div class="charge" price="15">
+                    <div style="font-size:14px;margin-top:4px;">麻辣小龙虾</div>
+                    <div style="font-size:16px;">15元</div>
+                    <div style="font-size:12px;margin-bottom:4px;">获得5张房卡</div>
+                </div>
+            </div>
+            <div class="charge-item">
+                <div class="charge" price="30">
+                    <div style="font-size:14px;margin-top:4px;">三文鱼刺身</div>
+                    <div style="font-size:16px;">30元</div>
+                    <div style="font-size:12px;margin-bottom:4px;">获得10张房卡</div>
+                </div>
+            </div>
+            <div class="charge-item">
+                <div class="charge" price="150">
+                    <div style="font-size:14px;margin-top:4px;">冰糖燕窝</div>
+                    <div style="font-size:16px;">150元</div>
+                    <div style="font-size:12px;margin-bottom:4px;">获得50张房卡</div>
+                </div>
+            </div>
+        </div>
+        <p>应付金额：<span class="price">0</span>元</p>
+        <button type="button" name="button" id="charge">立即充值</button>
+    </body>
+    <script src="./zepto.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var price = 0
+        $('.charge').click(function(e) {
+            $('.charge').removeClass('active')
+            $(this).addClass('active')
+            price = $(this).attr('price')
+            $('.price').text(price)
+        })
+        $('#charge').click(function (e) {
+            if (price === 0) {
+                alert('请选择要充值的金额！')
+            } else{
+                console.log(price)
+            }
+        })
+    </script>
+</html>
